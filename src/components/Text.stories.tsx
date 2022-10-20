@@ -7,6 +7,14 @@ export default {
   args: {
     children: 'Lorem Ipsum',
     size: 'md'
+  },
+  argTypes: {
+    size: { 
+      options: ['sm', 'md', 'lg'],
+      control: {
+        type: 'inline-radio'
+      }
+    }
   }
 } as Meta<TextProps>
 
@@ -28,7 +36,14 @@ export const CustomComponents: StoryObj<TextProps> = {
   args: {
     asChild: true,
     children: (
-      <p>Testando tag parágrafo </p>
+      <p>Testando tag parágrafo!</p>
     )
+  },
+  argTypes: {
+    children: { 
+      table: {
+        disable: true
+      }
+    }
   }
 }
