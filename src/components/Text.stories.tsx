@@ -9,7 +9,7 @@ export default {
     size: 'md'
   },
   argTypes: {
-    size: { 
+    size: {
       options: ['sm', 'md', 'lg'],
       control: {
         type: 'inline-radio'
@@ -36,11 +36,16 @@ export const CustomComponents: StoryObj<TextProps> = {
   args: {
     asChild: true,
     children: (
-      <p>Testando tag parágrafo!</p>
+      <p>Text with paragraph</p>
     )
   },
   argTypes: {
-    children: { 
+    children: {
+      table: {
+        disable: true
+      }
+    },
+    asChild: {
       table: {
         disable: true
       }
